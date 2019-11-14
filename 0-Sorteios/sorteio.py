@@ -1,12 +1,12 @@
 import random
 
-sorteado = int( random.randint(1,33) )
+sorteado = int( random.randint(1,27) )
 
 print('='*50)
 print('\n'*3)
 
 print(f'O numero sorteado foi: {sorteado}')
-with open('Sorteios/alunos.txt','r') as alunos:
+with open('0-Sorteios/alunos.txt','r') as alunos:
     contador = 1
     for i in alunos:   
         if contador == sorteado:
