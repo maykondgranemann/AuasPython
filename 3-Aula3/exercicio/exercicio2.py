@@ -4,3 +4,4 @@
 #--- Exiba uma mensagem de boas vindas para o cliente
 #--- Exiba um menu: Produtos alcoolicos e Produtos não alcoolicos, Sair
 #--- Caso o cliente seja menor de idade o item 'produtos alcoolicos' não deve ser exibido
+#--- Leia a opção digitada e crie uma tela para cada opção
