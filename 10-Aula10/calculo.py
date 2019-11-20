@@ -22,18 +22,18 @@ def multiplicacao (n1,n2):
     multiplicacao = n1 * n2
     return multiplicacao
 
-def div(n1,n2):
+def divisao_inteira(n1,n2):
     div = n1 // n2
     return div
 
-def divF(n1, n2):
+def divisao_fracionada(n1, n2):
     divF = n1 / n2
     return divF
 
-def restodiv(n1, n2):
+def resto(n1, n2):
     restodiv = n1 % n2
     return restodiv
 
-def raiz (n1,n2):  # n1 = radicando n2= indice da raiz 
+def raiz(n1,n2):  # n1 = radicando n2= indice da raiz 
     raiz = n1 ** (1/n2)
     return raiz
