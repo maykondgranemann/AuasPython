@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request
-from faixa import ler_faixa, criar_faixa, salvar_faixa
+from faixa import ler_faixas, criar_faixa, salvar_faixa
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def inicio():
 
 @app.route('/lista')
 def listar_faixas():
-    return render_template("lista.html", nome = 'Lista de Faixas', lista=ler_faixa())
+    return render_template("lista.html", nome = 'Lista de Faixas', lista=ler_faixas())
 
 
 @app.route('/salvar')
