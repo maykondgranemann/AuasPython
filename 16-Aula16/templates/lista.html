@@ -7,6 +7,13 @@
     <title>{{nome}}</title>
 </head>
 <body>
+    <!-- 
+        Código Python para leitura de uma lista de faixas musicas
+        A variável 'lista' contém uma lista de dicionários
+        O dicionários da lista possuem dados de uma faixa musical
+        É utilizado a estrutura de repetição for para imprimir 
+        Todos as faixas musicais dentro de tags html span
+     -->
     {% for faixa in lista %}
         <span>{{faixa['musica']}} - {{faixa['album']}} - {{faixa['artista']}} </span><br>
     {% endfor %}
