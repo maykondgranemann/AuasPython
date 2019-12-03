@@ -9,7 +9,7 @@ print(lista[3][0])
 # O resultado é: 9
 
 # Para acessar o numero 300 desta lista:
-lista =[3, 4, 5, [9, [80,90,100[200,300,400]], 11], 20, 30]
+lista =[3, 4, 5, [9, [80,90,100,[200,300,400]], 11], 20, 30]
 # Primeiro devemos acessar o indice que contêm a lista interna
 print(lista[3])
 # O resultado é: [9, [80, 90, 100, [200, 300, 400]], 11]
