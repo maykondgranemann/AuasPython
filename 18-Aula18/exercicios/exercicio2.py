@@ -1,4 +1,4 @@
-# Aula 18 - 03-11-2019
+# Aula 18 - 03-12-2019
 # Exercicio para lista dentro de lista
 
 # Dada a seguinte lista, resolva os seguintes questões:

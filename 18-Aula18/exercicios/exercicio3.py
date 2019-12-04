@@ -1,4 +1,4 @@
-# Aula 18 - 03-11-2019
+# Aula 18 - 03-12-2019
 
 # A lista a seguir possui mais uma lista interna, a lista de preços.
 # A lista de preços possui 3 sublistas dentro dela com os preços dos produtos.
