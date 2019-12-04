@@ -24,3 +24,16 @@ lista = [
           ['calça','camisa','japona','jaqueta','camiseta','bone','regata']
         ]
 
+
+def lista_iten(lista):
+  numero = 0
+  for lista_pequena in lista:
+    print(f"############# Posição: {numero} ################")
+    numero = numero +1
+    for abioluz in lista_pequena:
+      print(abioluz)
+      for i in abioluz:
+        print(i)
+
+
+lista_iten(lista)
