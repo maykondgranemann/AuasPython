@@ -9,6 +9,45 @@ pess   = [  ['Alex'   ,'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'João'   ,'Joaqu
             ['18'     ,'25'     ,'40'     ,'16'     ,'15'     ,'19'     ,'17'     ]   
         ]
 
+# cab[0] pess[0][0]  #nome        alex
+# cab[1] pess[1][0]  #telefone    4799991
+# cab[2] pess[2][0]  #email       a@a.com
+# cab[3] pess[3][0]  #idade       18
+
+# cab[0] pess[0][1]  #nome        Paulo
+# cab[1] pess[1][1]  #telefone    4799992
+# cab[2] pess[2][1]  #email       b@b.com
+# cab[3] pess[3][1]  #idade       25
+
+lista = []
+
+for indice_lento in range(7):
+        dic = {}
+        for indice_rapido in range(4):
+                
+                dic[ cab[ indice_rapido ] ] = pess[ indice_rapido ][ indice_lento ]
+                
+        lista.append(dic)
+
+for i in lista:
+        print(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 1 - Usando estas 2 listas, fazer uma função que crie retorne uma lista com dicionários
 # com os dados das pessoas com idade maior ou igua a 18 anos

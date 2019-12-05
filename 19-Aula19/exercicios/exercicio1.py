@@ -20,3 +20,4 @@ cadastroHBSIS = ['nome',   ['Alex'   ,'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'J
 # 3 - Usando a indexação faça uma lista com 3 bibliotecas contendo os dados 
 # do Mateus, Paulo # e João contendo
 # como chaves: nome, email, idade, telefone (nesta  sequencia)
+
