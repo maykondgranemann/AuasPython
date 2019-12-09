@@ -13,6 +13,9 @@ lista = [
          [6,'Levedura 2',15.50,87]
         ]
 
+
+
+
 # 2.1 - Faça uma função que pegue esta lista e retorne uma lista com biblioteca.
 
 # 2.2 - Faça outra função para consultar o preço através do código passado
@@ -44,7 +47,7 @@ def lista_biblioteca(lista):
         for lento in range ( len(lista[1:]) ):
                 biblioteca = {}
                 for rapido in range( len(lista[0]) ):
-                        biblioteca[lista[0][rapido]] = lista[lento+1][rapido]
+                        biblioteca[ lista[0][rapido]] = lista[lento+1][rapido]
                 lista_bibl.append(biblioteca)
         return lista_bibl
 

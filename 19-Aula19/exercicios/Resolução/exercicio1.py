@@ -33,6 +33,10 @@ print(f'{cadastroHBSIS[0]}  {cadastroHBSIS[1][0]} {cadastroHBSIS[2]}: {cadastroH
 print(f'{cadastroHBSIS[6]}  {cadastroHBSIS[1][4]} {cadastroHBSIS[7][4]} anos')
 print(f'{cadastroHBSIS[4]} de {cadastroHBSIS[1][3]} é {cadastroHBSIS[5][3]}')
 
+
+dicionário {cadastroHBSIS[0]: 'valor'}
+
+
 #  [
 # 0    'nome'                                                                     0 #
 # 1  '['Alex'   , 'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'João'   ,'Joaquim'],   1 #
