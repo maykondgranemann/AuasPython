@@ -16,3 +16,30 @@ dadobruto = '1;Arnaldo;23;m;alexcabeludo2@hotmail.com;014908648117'
 
 
 
+class Pessoa:
+    '''
+    Classe de pessoa
+    '''
+    def __init__ (self,dadobruto):
+        self.dado_bruto = dadobruto
+        self.codigo = None
+        self.nome = None
+        self.idade = None
+        self.sexo = None
+        self.email = None
+        self.telefone = None
+    
+    def tratar_dados(self):
+        pessoa = self.dado_bruto.strip().split(';')
+        self.codigo = int( pessoa[0] )
+        self.nome = pessoa[1]
+        self.idade = int( pessoa[2] )
+        self.sexo = pessoa[3]
+        self.email = pessoa[4]
+        self.telefone = pessoa [5]
+
+dadobruto = '1;Arnaldo;23;m;alexcabeludo2@hotmail.com;014908648117'
+pess = Pessoa(dadobruto)
+pess.tratar_dados()
+
+print(f'Codigo: {pess.codigo+1}\nNome: {pess.nome}')
