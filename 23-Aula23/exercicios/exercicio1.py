@@ -17,9 +17,6 @@ dadobruto = '1;Arnaldo;23;m;alexcabeludo2@hotmail.com;014908648117'
 
 
 class Pessoa:
-    '''
-    Classe de pessoa
-    '''
     def __init__ (self,dadobruto):
         self.dado_bruto = dadobruto
         self.codigo = None
@@ -37,6 +34,7 @@ class Pessoa:
         self.sexo = pessoa[3]
         self.email = pessoa[4]
         self.telefone = pessoa [5]
+        
 
     def __str__(self):
         '''
