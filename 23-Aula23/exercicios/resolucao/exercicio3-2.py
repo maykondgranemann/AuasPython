@@ -64,8 +64,7 @@ class Cliente:
         self.email = input('digite o email do cliente: ')
         self.telefone = input('Digite o telefone: ')       
         self.dado_bruto = f'{self.codigo};{self.nome};{self.idade};{self.sexo};{self.email};{self.telefone}'
-        #self.salvar("arquivo_novo",'w')
-    
+        #-
     def __eq__ (self,valor):
         ''' habilitar a operação =='''
         return self.codigo == valor
