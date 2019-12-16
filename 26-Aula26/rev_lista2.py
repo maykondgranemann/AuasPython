@@ -335,3 +335,8 @@ remove todos os itens da lista
 >>> lista.clear()
 >>> lista
 []
+
+
+
+
+abioluz@gmail.com
