@@ -6,7 +6,7 @@ print('='*50)
 print('\n'*3)
 
 print(f'O numero sorteado foi: {sorteado}')
-with open('0-Sorteios/alunos.txt','r') as alunos:
+with open('00-Sorteios/alunos.txt','r') as alunos:
     contador = 1
     for i in alunos:   
         if contador == sorteado:
