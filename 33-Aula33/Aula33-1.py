@@ -1,11 +1,11 @@
-#======= Classes
+#======= Estruturas de dados e DB
+
 #----- Importar biblioteca do Mysql
 import MySQLdb
 #----- Configurar a conexão
 conexao = MySQLdb.connect(host='mysql.topskills.study', database='topskills01', user='topskills01', passwd='ts2019')
 #----- Salva o cursor da conexão em uma variável
 cursor = conexao.cursor()
-
 #----- Criação do comando SQL e passado para o cursor
 comando_sql_select = "SELECT * FROM 01_MDG_PESSOA"
 cursor.execute(comando_sql_select)
@@ -26,7 +26,7 @@ for p in resultado:
     lista_pessoas.append(dicionario_pessoa)
 
 #----- Cria um arquivo e atribui a uma variável 'arquivo'
-with open('33-Aula33/pessoas.txt','a') as arquivo:
+with open('33-Aula33/pessoas1.txt','a') as arquivo:
     #---- Percorre a lista de dicionário e salva no arquivo em formato pré-definido
     for p in lista_pessoas:
         arquivo.write(f"{p['Id']};{p['Nome']};{p['Sobrenome']};{p['Idade']};{p['Endereco_Id']}\n")
