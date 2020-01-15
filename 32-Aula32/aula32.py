@@ -2,13 +2,15 @@
 # referencia ao Mysql
 
 import MySQLdb
+
+
 #listar todas as pessoas 
 def listar_todos(c):
     c.execute('SELECT * FROM 01_MDG_PESSOA')
     pessoas = c.fetchall()
     for p  in  pessoas:
         print(p)
-        
+
 #buscar uma pessoa pelo ID
 def buscar_por_id(c, id):
     c.execute(f'SELECT * FROM 01_MDG_PESSOA WHERE ID = {id}')
@@ -28,8 +30,12 @@ def salvar(cn, cr, nome, sobrenome, idade, endereco_id='NULL'):
 
 #alterar pessoa
 def alterar(cn, cr, id, nome, sobrenome, idade, endereco_id='NULL'):
-    cr.execute(f"UPDATE 01_MDG_PESSOA SET NOME='{nome}', SOBRENOME='{sobrenome}', IDADE={idade}, ENDERECO_ID={endereco_id} WHERE ID={id} ")
-    cn.commit()
+    try:
+        cr.execute(f"UPDATE 01_MDG_PESSOA SET NOME='{nome}', SOBRENOME='{sobrenome}', IDADE={idade}, ENDERECO_ID={endereco_id} WHERE ID={id} ")
+        cn.commit()
+    except (MySQLdb.Error, MySQLdb.Warning) as e:
+        if(e.args[0]==1452):
+            print(f"Erro de Foreign Key jovem, id errado")
 
 #deletar pessoa por ID
 def deletar(cn, cr, id):
@@ -43,5 +49,5 @@ cursor = conexao.cursor()
 # buscar_por_id(cursor, 3)
 # buscar_por_sobrenome(cursor,'Gru')
 # salvar(conexao, cursor, 'Voltolini', 'KingOfFlask', 16,5)
-# alterar(conexao, cursor, 8, 'Gugu Voltolini', 'KingOfBasquete', 17, 5)
-deletar(conexao, cursor, 7)
+alterar(conexao, cursor, 8, 'Gugu Voltolini', 'KingOfBasquete', 17, 6)
+# deletar(conexao, cursor, 7)
