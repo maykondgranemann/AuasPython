@@ -15,6 +15,7 @@ pessoa.endereco.cidade = 'gaspar'
 pessoa.endereco.cep = '11111-000'
 
 controller = PessoaController()
-id_salvo = controller.salvar(pessoa)
-pessoa_endereco = controller.buscar_por_id(id_salvo)
-print(pessoa_endereco)
+#id_salvo = controller.salvar(pessoa)
+#pessoa_endereco = controller.buscar_por_id(id_salvo)
+#print(pessoa_endereco)
+print(controller.buscar_por_id(1))
