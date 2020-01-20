@@ -24,6 +24,7 @@
                     <th>Bairro</th>
                     <th>Cidade</th>
                     <th>Cep</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +41,10 @@
                     <td>{{ p[9] if p[9] else '' }}</td>
                     <td>{{ p[10] if p[10] else '' }}</td>
                     <td>{{ p[11] if p[11] else '' }}</td>
+                    <td>
+                        <a href="/editar?id={{ p[0] }}" class="editar">Editar</a>
+                        <a href="/excluir?id={{ p[0] }}&id_end={{ p[5] }}" class="excluir">Excluir</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
