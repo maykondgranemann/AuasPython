@@ -3,6 +3,8 @@ import sys
 sys.path.append('/Users/mdgranemann/Documents/Github/AlunosPython/TrabalhosPython/36-Aula36')
 from Controller.pessoa_controller import PessoaController
 from Controller.endereco_controller import EnderecoController
+from Model.endereco import Endereco
+from Model.pessoa import Pessoa
 
 app = Flask(__name__)
 pessoa_controller = PessoaController()
@@ -20,12 +22,10 @@ def listar():
 
 @app.route('/cadastrar')
 def cadastrar():
-    return render_template('cadastrar.html', titulo_app = nome)
-
-@app.route('/editar')
-def editar():
     id = request.args['id']
-    return f'O id selecionado foi {id}'
+    pessoa = pessoa_controller.buscar_por_id(id)
+    return render_template('cadastrar.html', titulo_app = nome, pessoa = pessoa )
+
 
 @app.route('/excluir')
 def excluir():
@@ -35,4 +35,25 @@ def excluir():
     if id_end != 'None':
         end_controller.deletar(id_end)
     return redirect('/listar')
+
+@app.route('/salvar')
+def salvar():
+    pessoa = Pessoa()
+    pessoa.nome = request.args['nome']
+    pessoa.sobrenome = request.args['sobrenome']
+    pessoa.idade = request.args['idade']
+
+    end = Endereco()
+    end.logradouro = request.args['logradouro']
+    end.numero = request.args['numero']
+    end.complemento = request.args['complemento']
+    end.bairro = request.args['bairro']
+    end.cidade = request.args['cidade']
+    end.cep = request.args['cep']
+
+    pessoa.endereco = end
+    pessoa_controller.salvar(pessoa)
+    return redirect('/listar')
+
 app.run(debug=True)
+
