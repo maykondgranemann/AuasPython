@@ -8,45 +8,44 @@
     <link rel="stylesheet" href="../static/estilo.css">
 </head>
 <body>
-    {{pessoa[0]}}
     <div class="conteudo">
         <form action="/salvar" method="get">
             <div class="descricoes"> 
                 <label for="nome">Nome:</label>
             </div>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome" value="{{pessoa[1]}}"> <br/>
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome" value="{{pessoa.nome}}"> <br/>
             <div class="descricoes"> 
                 <label for="sobrenome">Sobrenome:</label>
             </div>
-            <input type="text" name="sobrenome" id="sobrenome" value="{{pessoa[2]}}"> <br/>
+            <input type="text" name="sobrenome" id="sobrenome" value="{{pessoa.sobrenome}}"> <br/>
             <div class="descricoes"> 
                 <label for="idade">Idade:</label>
             </div>
-            <input type="text" name="idade" id="idade"> <br/>
+            <input type="text" name="idade" id="idade" value="{{pessoa.idade}}"> <br/>
             <div class="descricoes"> 
                 <label for="logradouro">Logradouro:</label>
             </div>
-            <input type="text" name="logradouro" id="logradouro"> <br/>
+            <input type="text" name="logradouro" id="logradouro" value="{{pessoa.endereco.logradouro}}"> <br/>
             <div class="descricoes"> 
                 <label for="numero">Numero:</label>
             </div>
-            <input type="text" name="numero" id="numero"> <br/>
+            <input type="text" name="numero" id="numero" value="{{pessoa.endereco.numero}}"> <br/>
             <div class="descricoes"> 
                 <label for="complemento">Complemento:</label>
             </div>
-            <input type="text" name="complemento" id="complemento"> <br/>
+            <input type="text" name="complemento" id="complemento" value="{{pessoa.endereco.complemento}}"> <br/>
             <div class="descricoes"> 
                 <label for="bairro">Bairro:</label>
             </div>
-            <input type="text" name="bairro" id="bairro"> <br/>
+            <input type="text" name="bairro" id="bairro" value="{{pessoa.endereco.bairro}}"> <br/>
             <div class="descricoes"> 
                 <label for="cidade">Cidade:</label>
             </div>
-            <input type="text" name="cidade" id="cidade"> <br/>
+            <input type="text" name="cidade" id="cidade" value="{{pessoa.endereco.cidade}}"> <br/>
             <div class="descricoes"> 
                 <label for="cep">CEP:</label>
             </div>
-            <input type="text" name="cep" id="cep"> <br/>
+            <input type="text" name="cep" id="cep" value="{{pessoa.endereco.cep}}"> <br/>
 
             <hr/>
             <input type="submit" value="Salvar" class="salvar">
