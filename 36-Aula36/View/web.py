@@ -22,8 +22,11 @@ def listar():
 
 @app.route('/cadastrar')
 def cadastrar():
-    id = request.args['id']
-    pessoa = pessoa_controller.buscar_por_id(id)
+    pessoa = Pessoa()
+    pessoa.endereco = Endereco()
+    if 'id' in request.args:
+        id = request.args['id']
+        pessoa = pessoa_controller.buscar_por_id(id)
     return render_template('cadastrar.html', titulo_app = nome, pessoa = pessoa )
 
 
@@ -39,11 +42,13 @@ def excluir():
 @app.route('/salvar')
 def salvar():
     pessoa = Pessoa()
+    pessoa.id = request.args['id']
     pessoa.nome = request.args['nome']
     pessoa.sobrenome = request.args['sobrenome']
     pessoa.idade = request.args['idade']
 
     end = Endereco()
+    end.id = request.args['endereco_id']
     end.logradouro = request.args['logradouro']
     end.numero = request.args['numero']
     end.complemento = request.args['complemento']
@@ -52,7 +57,10 @@ def salvar():
     end.cep = request.args['cep']
 
     pessoa.endereco = end
-    pessoa_controller.salvar(pessoa)
+    if pessoa.id == 0:
+        pessoa_controller.salvar(pessoa)
+    else:
+        pessoa_controller.alterar(pessoa)
     return redirect('/listar')
 
 app.run(debug=True)
