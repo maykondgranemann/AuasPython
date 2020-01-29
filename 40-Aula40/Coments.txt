@@ -1,0 +1,8 @@
+pip3 install flask_restful
+Metodos HTTP
+#GET
+#POST
+#PUT
+#DELETE
+Ferramenta para teste de rotas da API
+#INSOMNIA https://insomnia.rest/download/
