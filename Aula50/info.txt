@@ -1,0 +1,3 @@
+linux
+echo "export PATH=~/.local/bin:$PATH" > ~/.profile
+source ~/.profile
