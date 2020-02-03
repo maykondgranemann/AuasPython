@@ -1,6 +1,8 @@
 from flask_restful import Resource
+from flask import request
 
 from Aula50.dao.pessoa_dao import PessoaDao
+from Aula50.model.pessoa_model import PessoaModel
 
 class PessoaController(Resource):
     def __init__(self):
@@ -13,11 +15,19 @@ class PessoaController(Resource):
 
 
     def post(self):
-        msg = self.dao.insert('')
+        nome = request.json['nome']
+        sobrenome = request.json['sobrenome']
+        idade = int(request.json['idade'])
+        pessoa = PessoaModel(nome, sobrenome, idade)
+        msg = self.dao.insert(pessoa)
         return msg
 
-    def put(self):
-        msg = self.dao.update('')
+    def put(self, id):
+        nome = request.json['nome']
+        sobrenome = request.json['sobrenome']
+        idade = int(request.json['idade'])
+        pessoa = PessoaModel(nome, sobrenome, idade, id)
+        msg = self.dao.update(pessoa)
         return msg
 
     def delete(self, id):
