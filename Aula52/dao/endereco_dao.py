@@ -19,7 +19,7 @@ class EnderecoDao(BaseDao):
         return model.__dict__
 
     def inserir(self, model: EnderecoModel):
-        self.cursor.execute("""INSERT INTO {}  
+        comando_sql = """INSERT INTO {}  
                             (
                                 LOGRADOURO,
                                 NUMERO,
@@ -36,13 +36,12 @@ class EnderecoDao(BaseDao):
                                 '{}',
                                 '{}'
                             )
-                            """.format(self.tabela, model.logradouro, model.numero, model.complemento, model.bairro, model.cidade, model.cep ))
-        self.conexao.commit()
-        model.id = self.cursor.lastrowid
+                            """.format(self.tabela, model.logradouro, model.numero, model.complemento, model.bairro, model.cidade, model.cep )
+        model.id = super().inserir(comando_sql)
         return model.__dict__
 
     def alterar(self, model: EnderecoModel):
-        self.cursor.execute(""" UPDATE {}
+        comando_sql = """ UPDATE {}
                             SET 
                                 LOGRADOURO = '{}',
                                 NUMERO = '{}',
@@ -51,14 +50,10 @@ class EnderecoDao(BaseDao):
                                 CIDADE = '{}',
                                 CEP = '{}'
                             WHERE ID = {}
-                            """.format(self.tabela, model.logradouro, model.numero, model.complemento, model.bairro, model.cidade, model.cep, model.id ))
-        self.conexao.commit()
+                            """.format(self.tabela, model.logradouro, model.numero, model.complemento, model.bairro, model.cidade, model.cep, model.id )
+        super().alterar(comando_sql)
         return model.__dict__
 
     def deletar(self, id):
-        self.cursor.execute(""" DELETE FROM {}
-                                WHERE ID = {}
-                            """.format(self.tabela, id))
-        self.conexao.commit()
-        return "Endereco de id {} deletado com sucesso".format(id)
+        return super().deletar(id)
 

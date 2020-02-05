@@ -1,31 +1,24 @@
-from flask_restful import Resource
 from flask import request
 
 from Aula52.model.pessoa_model import PessoaModel
 from Aula52.dao.pessoa_dao import PessoaDao
+from Aula52.controller.base_controller import BaseController
 
-class PessoaController(Resource):
+class PessoaController(BaseController):
     def __init__(self):
-        self.dao = PessoaDao()
-
-    def get(self, id=None):
-        if id:
-            return self.dao.buscar_por_id(id)
-        return self.dao.listar_todos()
+        super().__init__(PessoaDao())
 
     def post(self):
-        nome = request.json['nome']
-        sobrenome = request.json['sobrenome']
-        idade = int(request.json['idade'])
-        pessoa = PessoaModel(nome, sobrenome, idade)
-        return self.dao.inserir(pessoa)
+        self.carrega_parametros()
+        model = PessoaModel(self.nome, self.sobrenome, self.idade)
+        return super().post(model)
 
     def put(self, id):
-        nome = request.json['nome']
-        sobrenome = request.json['sobrenome']
-        idade = int(request.json['idade'])
-        pessoa = PessoaModel(nome, sobrenome, idade, id)
-        return self.dao.alterar(pessoa)
+        self.carrega_parametros()
+        model = PessoaModel(self.nome, self.sobrenome, self.idade, id)
+        return super().put(model)
 
-    def delete(self, id):
-        return self.dao.deletar(id)
+    def carrega_parametros(self):
+        self.nome = request.json['nome']
+        self.sobrenome = request.json['sobrenome']
+        self.idade = int(request.json['idade'])

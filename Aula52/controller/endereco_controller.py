@@ -1,37 +1,27 @@
-from flask_restful import Resource
 from flask import request
 
 from Aula52.model.endereco_model import EnderecoModel
 from Aula52.dao.endereco_dao import EnderecoDao
+from Aula52.controller.base_controller import BaseController
 
-class EnderecoController(Resource):
+class EnderecoController(BaseController):
     def __init__(self):
-        self.dao = EnderecoDao()
-
-    def get(self, id=None):
-        if id:
-            return self.dao.buscar_por_id(id)
-        return self.dao.listar_todos()
+        super().__init__( EnderecoDao() )
 
     def post(self):
-        logradouro = request.json['logradouro']
-        numero = request.json['numero']
-        complemento = request.json['complemento']
-        bairro = request.json['bairro']
-        cidade = request.json['cidade']
-        cep = request.json['cep']
-        model = EnderecoModel(logradouro, complemento, numero, bairro, cidade, cep)
+        self.carrega_parametros()
+        model = EnderecoModel(self.logradouro, self.complemento, self.numero, self.bairro, self.cidade, self.cep)
         return self.dao.inserir(model)
 
     def put(self, id):
-        logradouro = request.json['logradouro']
-        numero = request.json['numero']
-        complemento = request.json['complemento']
-        bairro = request.json['bairro']
-        cidade = request.json['cidade']
-        cep = request.json['cep']
-        model = EnderecoModel(logradouro, complemento, numero, bairro, cidade, cep, id)
+        self.carrega_parametros()
+        model = EnderecoModel(self.logradouro, self.complemento, self.numero, self.bairro, self.cidade, self.cep, id)
         return self.dao.alterar(model)
 
-    def delete(self, id):
-        return self.dao.deletar(id)
+    def carrega_parametros(self):
+        self.logradouro = request.json['logradouro']
+        self.numero = request.json['numero']
+        self.complemento = request.json['complemento']
+        self.bairro = request.json['bairro']
+        self.cidade = request.json['cidade']
+        self.cep = request.json['cep']
