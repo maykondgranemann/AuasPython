@@ -1,11 +1,12 @@
-from Aula53.model.base_model import BaseModel
+import sqlalchemy as db
+from sqlalchemy.ext.declarative import declarative_base
 
-class ProdutoModel(BaseModel):
-
-    def __init__(self):
-        self.nome = self.db.Column(self.db.String(length=100))
-        self.descricao = self.db.Column(self.db.String(length=200))
-        self.id = self.db.Column(self.db.Integer, primary_key=True)
+BaseAlchemy = declarative_base()
+class ProdutoModel(BaseAlchemy):
+    __tablename__ = "Produto"
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(length=100))
+    descricao = db.Column(db.String(length=200))
 
     def __str__(self):
         return "{}-{}-{}".format(self.id, self.nome,self.descricao)
