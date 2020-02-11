@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-from Aula55.dao.base_dao import BaseDao
+from dao.base_dao import BaseDao
 
 class BaseController(Resource):
     def __init__(self, dao:BaseDao):

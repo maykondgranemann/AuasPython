@@ -1,9 +1,10 @@
 import sqlalchemy as db
 from sqlalchemy.orm import relationship
 
-from Aula55.model.pessoa import Pessoa
-from Aula55.model.base import Base
-from Aula55.dao.pessoa_dao import PessoaDao
+from dao.pessoa_dao import PessoaDao
+from model.pessoa import Pessoa
+from model.base import Base
+from dao.pessoa_dao import PessoaDao
 
 class Autor(Base):
     __tablename__ = "LIVRARIA_AUTOR"
@@ -12,3 +13,20 @@ class Autor(Base):
     descricao = db.Column(db.String(length=200))
     pessoa_id = db.Column(db.Integer, db.ForeignKey('LIVRARIA_PESSOA.id'))
     pessoa = relationship(Pessoa)
+
+    def __init__(self, pseudonimo, descricao, pessoa_id, id=None):
+        self.id = id
+        self.pseudonimo = pseudonimo
+        self.descricao = descricao
+        self.pessoa_id = pessoa_id
+
+    def serialize(self):
+        dao = PessoaDao()
+        pessoa = dao.get_by_id(self.pessoa_id)
+        return {
+            "id" : self.id,
+            "pseudonimo" : self.pseudonimo,
+            "descricao" : self.descricao,
+            "pessoa_id" : self.pessoa_id,
+            "pessoa" : self.pessoa.serialize()
+        }

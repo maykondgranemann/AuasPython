@@ -1,10 +1,10 @@
 import sqlalchemy as db
 from sqlalchemy.orm import relationship
 
-from Aula55.model.base import Base
-from Aula55.model.autor import Autor
-from Aula55.model.editora import Editora
-from Aula55.model.genero import Genero
+from model.base import Base
+from model.autor import Autor
+from model.editora import Editora
+from model.genero import Genero
 
 class Livro(Base):
     id = db.Column(db.Integer, primary_key=True)

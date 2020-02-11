@@ -1,6 +1,6 @@
 import sqlalchemy as db
 
-from Aula55.model.base import Base
+from model.base import Base
 
 class Editora(Base):
     __tablename__ = 'LIVRARIA_EDITORA'

@@ -1,8 +1,8 @@
 from flask import request
 
-from Aula55.controller.base_controller import BaseController
-from Aula55.dao.pessoa_dao import PessoaDao
-from Aula55.model.pessoa import Pessoa
+from controller.base_controller import BaseController
+from dao.pessoa_dao import PessoaDao
+from model.pessoa import Pessoa
 
 class PessoaController(BaseController):
     def __init__(self):

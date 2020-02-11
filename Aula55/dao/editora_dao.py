@@ -1,5 +1,5 @@
-from Aula55.dao.base_dao import BaseDao
-from Aula55.model.editora import Editora
+from dao.base_dao import BaseDao
+from model.editora import Editora
 
 class EditoraDao(BaseDao):
     def __init__(self):

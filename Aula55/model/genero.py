@@ -1,6 +1,6 @@
 import sqlalchemy as db
 
-from Aula55.model.base import Base
+from model.base import Base
 
 class Genero(Base):
     __tablename__ = "LIVRARIA_GENERO"

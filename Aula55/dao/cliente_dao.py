@@ -1,5 +1,5 @@
-from Aula55.dao.base_dao import BaseDao
-from Aula55.model.cliente import Cliente
+from dao.base_dao import BaseDao
+from model.cliente import Cliente
 
 class ClienteDao(BaseDao):
     def __init__(self):

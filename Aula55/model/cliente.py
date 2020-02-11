@@ -1,7 +1,7 @@
 import sqlalchemy as db
 from sqlalchemy.orm import relationship
 
-from Aula55.model.pessoa import Pessoa
+from model.pessoa import Pessoa
 
 class Cliente:
     __tablename__ = "LIVRARIA_CLIENTE"

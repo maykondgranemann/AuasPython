@@ -17,7 +17,8 @@ class BaseDao:
         return list
 
     def get_by_id(self, id):
-        return self.session.query(self.table).filter_by(id=id).one()
+        model = self.session.query(self.table).filter_by(id=id).one()
+        return model.serialize()
 
     def insert(self, model):
         self.session.add(model)

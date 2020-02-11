@@ -1,6 +1,8 @@
-from Aula55.dao.autor_dao import AutorDao
+from dao. autor_dao import AutorDao
+from model.autor import Autor
 
 dao = AutorDao()
-lista = dao.list_all()
-for a in lista:
-    print(a)
+
+teste = dao.get_by_id(11)
+
+print(teste)

@@ -1,5 +1,5 @@
-from Aula55.dao.base_dao import BaseDao
-from Aula55.model.genero import Genero
+from dao.base_dao import BaseDao
+from model.genero import Genero
 
 class GeneroDao(BaseDao):
     def __init__(self):
