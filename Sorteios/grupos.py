@@ -4,7 +4,7 @@ tamanho_grupo = 2
 numero_de_grupos = numero_alunos/tamanho_grupo
 
 def ler_alunos():
-    with open('00-Sorteios/lista_alunos.txt','r') as arquivo:
+    with open('Sorteios/lista_alunos.txt','r') as arquivo:
         for a in arquivo:
             lista_alunos.append(a.strip())
 

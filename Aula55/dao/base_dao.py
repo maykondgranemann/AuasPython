@@ -13,7 +13,7 @@ class BaseDao:
         list = []
         list_model =self.session.query(self.table).all()
         for m in list_model:
-            list.append(m.__dict__)
+            list.append(m)
         return list
 
     def get_by_id(self, id):
