@@ -12,3 +12,19 @@ class Autor(Base):
     descricao = db.Column(db.String(length=200))
     pessoa_id = db.Column(db.Integer, db.ForeignKey('LIVRARIA_PESSOA.id'))
     pessoa = relationship(Pessoa)
+
+    def __init__(self, pseudonimo, descricao, pessoa_id, pessoa, id=None):
+        self.pseudonimo = pseudonimo
+        self.descricao = descricao
+        self.pessoa_id = pessoa_id
+        self.pessoa = pessoa
+        self.id = id
+
+    def serialize(self):
+        return {
+            "id" : self.id,
+            "pseudonimo" : self.pseudonimo,
+            "descricao" : self.descricao,
+            "pessoa_id" : self.pessoa_id,
+            "pessoa" : self.pessoa.serialize()
+        }
