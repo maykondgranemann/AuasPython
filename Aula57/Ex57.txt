@@ -1,0 +1,82 @@
+App - 39
+3- 13
+13- Func
+1  - Login -> Maykon
+2  - Cadastro/Edicao - Pessoa -> Maykon
+3  - Chat -> Maykon
+4  - Post -> Maykon
+5  - Amigos -  Melhores -> Maykon
+6  - Grupos (Comunidades do Orkut) -> Maykon
+7  - Comentarios -> Maykon
+8  - Eventos -> Maykon
+9  - Reações = (Feedback) -> Maykon
+10 - Notificações -> Maykon
+11 - Perfis -> Maykon
+12 - Feed -> Maykon
+13 - Privacidade -> Maykon
+
+Grupo1 -
+Abreu
+Danieli
+Pedro
+
+Grupo 2 -
+Thomas
+Suzuki
+Parasky
+
+Grupo 3 -
+Victor,
+Vasconcelos,
+Talissa
+
+Grupo 4
+George,
+William,
+Guilherme
+
+Grupo 5
+Renan,
+Bruna,
+Vitor
+
+Grupo 6
+Marcela,
+Correia,
+Keunan
+
+Grupo 7 -
+Natan,
+Josue,
+Marciano
+
+Grupo 8 -
+Voltolini,
+Pablo,
+Luz
+
+Grupo 9 -
+Aviz,
+Felipe,
+Ruan
+
+Grupo 10
+Daniel,
+Mirella,
+Juninho
+
+Grupo 11
+Draetta,
+Thalyta,
+Antônio
+
+Grupo 12
+João,
+Nicole,
+Teti
+
+Grupo 13
+Diego,
+Lucas
+Vinicius
+
