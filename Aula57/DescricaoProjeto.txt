@@ -1,0 +1,10 @@
+BaseDeDesenv
+host:       mysql.padawans.dev
+database:   padawans03
+user:       padawans03
+pwd:        padawans2020
+
+SugestãoDeNomes:
+1-LumusDev
+2-PyBook
+3-

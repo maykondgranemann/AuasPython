@@ -1,19 +1,16 @@
-App - 39
-3- 13
-13- Func
-1  - Login -> Maykon
-2  - Cadastro/Edicao - Pessoa -> Maykon
-3  - Chat -> Maykon
-4  - Post -> Maykon
-5  - Amigos -  Melhores -> Maykon
-6  - Grupos (Comunidades do Orkut) -> Maykon
-7  - Comentarios -> Maykon
-8  - Eventos -> Maykon
-9  - Reações = (Feedback) -> Maykon
-10 - Notificações -> Maykon
-11 - Perfis -> Maykon
-12 - Feed -> Maykon
-13 - Privacidade -> Maykon
+1  - Login -> 10
+2  - Cadastro/Edicao - Pessoa -> 6
+3  - Chat -> 8
+4  - Post -> 1
+5  - Amigos -  Melhores -> 3
+6  - Grupos (Comunidades do Orkut) -> 12
+7  - Comentarios -> 2
+8  - Eventos -> 9
+9  - Reações = (Feedback) -> 13
+10 - Notificações -> 7
+11 - Perfis -> 11
+12 - Feed -> 4
+13 - Privacidade -> 5
 
 Grupo1 -
 Abreu
