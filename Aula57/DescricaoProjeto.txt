@@ -5,6 +5,13 @@ user:       padawans03
 pwd:        padawans2020
 
 SugestãoDeNomes:
-1-LumusDev
-2-PyBook
-3-
+1-  LumosDev        = 0
+2-  PyBook          =
+3-  PadaWins        =
+4-  PadaWiki        =
+5-  NextJedi        = 0
+6-  MundoPadawan    = 0
+7-  DarkSide        =
+8-  DeepWan         = 16
+9-  PWorld          =
+10- AmDev           = 21

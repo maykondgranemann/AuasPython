@@ -9,7 +9,7 @@
 9  - Reações = (Feedback) -> 13
 10 - Notificações -> 7
 11 - Perfis -> 11
-12 - Feed -> 4
+12 - Albuns -> 4
 13 - Privacidade -> 5
 
 Grupo1 -
@@ -38,8 +38,8 @@ Bruna,
 Vitor
 
 Grupo 6
-Marcela,
-Correia,
+Marcela
+Correia
 Keunan
 
 Grupo 7 -
@@ -57,9 +57,9 @@ Aviz,
 Felipe,
 Ruan
 
-Grupo 10
-Daniel,
-Mirella,
+Grupo 10 -
+Daniel
+Mirella
 Juninho
 
 Grupo 11
